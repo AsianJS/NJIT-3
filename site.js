@@ -41,11 +41,13 @@ const vue_app = Vue.createApp({
   },
   methods: {
     /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
+    //Turns date array into an actual date
     getMonthText(movie) {
       let event = new Date(Date.UTC(movie.released[0], movie.released[1] - 1, movie.released[2]));
       let options = { year: 'numeric', month: 'long', day: 'numeric' };
       return event.toLocaleDateString(undefined, options);
     },
+    //Every time a poster is clicked, the next poster is shown
     posterclick(movie) {
       if(movie.posterindex == movie.posters.length - 1){
         movie.posterindex = 0;
@@ -53,12 +55,15 @@ const vue_app = Vue.createApp({
         movie.posterindex++;
       }
     },
+    //When the like button is clicked, the likes go up.
     like(movie){
       movie.likes++;
     },
+    //When the dislike button is clicked, the dislikes go up.
     dislike(movie){
       movie.dislikes++;
     }, 
+    //Turns minutes into hours and minutes;
     timeText(movie){
       let hours = Math.trunc(movie.runtime/60);
       let minutes = movie.runtime - 60 * hours;
