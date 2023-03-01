@@ -36,7 +36,7 @@ const vue_app = Vue.createApp({
       /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
       title: "IMDB + Jacob's Top Movies",
       owner: "Jacob",
-      github: "https://github.com/AsianJS"
+      github: "https://github.com/AsianJS",
     }
   },
   methods: {
@@ -68,7 +68,7 @@ const vue_app = Vue.createApp({
       let hours = Math.trunc(movie.runtime/60);
       let minutes = movie.runtime - 60 * hours;
       return hours + "h " + minutes + "m"
-    }
+    },
   }
 })
 
