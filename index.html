@@ -42,7 +42,8 @@
             <div class="imageInfo">Poster of {{movie.posterindex}} of {{movie.posters.length}}</div>
 
             <p class="title">{{movie.title}} ({{movie.country}})</p>
-            <p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{movie.iscore}} </p>
+            <p class="score" style="border-radius: 50%;"><i class="bi bi-star" aria-hidden="true"></i> {{movie.iscore}}
+            </p>
             <p class="runtime">Runtime: {{timeText(movie)}}</p>
             <p class="released">Released: {{getMonthText(movie)}} | Rated:
               {{movie.rating}}</p>
